@@ -8,11 +8,14 @@
 
 import UIKit
 
-fileprivate enum FileConstants {
+fileprivate struct FileConstants {
     static let NibName = "WeatherDashboardController"
 }
 
 class WeatherDashboardController: UIViewController {
+
+    var presenter: WeatherDashboardPresenterProtocol?
+    
     init() {
         super.init(nibName: FileConstants.NibName, bundle: Bundle(for: type(of: self)))
     }
@@ -26,6 +29,23 @@ class WeatherDashboardController: UIViewController {
 extension WeatherDashboardController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
+}
+
+// MARK: - View Protocol
+extension WeatherDashboardController: WeatherDashboardViewProtocol {
+    
+    func showError(_ error: String) {
+        
+    }
+    
+    func showLoading() {
+        
+    }
+    
+    func hideLoading() {
+        
+    }
+    
 }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34EBC47B23871B230026160A /* WeatherDashboardProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBC47A23871B230026160A /* WeatherDashboardProtocols.swift */; };
+		34EBC47E23871D720026160A /* WeatherDashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBC47D23871D720026160A /* WeatherDashboardBuilder.swift */; };
+		34EBC48023871E880026160A /* WeatherDashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBC47F23871E880026160A /* WeatherDashboardInteractor.swift */; };
+		34EBC48223871E9C0026160A /* WeatherDashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBC48123871E9C0026160A /* WeatherDashboardPresenter.swift */; };
+		34EBC48423871EA40026160A /* WeatherDashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBC48323871EA40026160A /* WeatherDashboardRouter.swift */; };
+		34EBC48623871F420026160A /* WeatherDashboardRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBC48523871F420026160A /* WeatherDashboardRemoteDataManager.swift */; };
 		34EDE4782386E4C600DA00E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EDE4772386E4C600DA00E6 /* AppDelegate.swift */; };
 		34EDE47F2386E4C700DA00E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34EDE47E2386E4C700DA00E6 /* Assets.xcassets */; };
 		34EDE48D2386E4C700DA00E6 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EDE48C2386E4C700DA00E6 /* WeatherAppTests.swift */; };
@@ -25,6 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34EBC47A23871B230026160A /* WeatherDashboardProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDashboardProtocols.swift; sourceTree = "<group>"; };
+		34EBC47D23871D720026160A /* WeatherDashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDashboardBuilder.swift; sourceTree = "<group>"; };
+		34EBC47F23871E880026160A /* WeatherDashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDashboardInteractor.swift; sourceTree = "<group>"; };
+		34EBC48123871E9C0026160A /* WeatherDashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDashboardPresenter.swift; sourceTree = "<group>"; };
+		34EBC48323871EA40026160A /* WeatherDashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDashboardRouter.swift; sourceTree = "<group>"; };
+		34EBC48523871F420026160A /* WeatherDashboardRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDashboardRemoteDataManager.swift; sourceTree = "<group>"; };
 		34EDE4742386E4C600DA00E6 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EDE4772386E4C600DA00E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34EDE47E2386E4C700DA00E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +67,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34EBC48823871FD20026160A /* Buılder */ = {
+			isa = PBXGroup;
+			children = (
+				34EBC48323871EA40026160A /* WeatherDashboardRouter.swift */,
+				34EBC47A23871B230026160A /* WeatherDashboardProtocols.swift */,
+				34EBC47D23871D720026160A /* WeatherDashboardBuilder.swift */,
+			);
+			path = "Buılder";
+			sourceTree = "<group>";
+		};
+		34EBC48923871FD70026160A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				34EBC48123871E9C0026160A /* WeatherDashboardPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		34EBC48A23871FDC0026160A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				34EBC47F23871E880026160A /* WeatherDashboardInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		34EBC48B23871FE80026160A /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				34EBC48523871F420026160A /* WeatherDashboardRemoteDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		34EDE46B2386E4C600DA00E6 = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +149,11 @@
 		34EDE49C238715D300DA00E6 /* WeatherDashboard */ = {
 			isa = PBXGroup;
 			children = (
+				34EBC48B23871FE80026160A /* DataManager */,
+				34EBC48A23871FDC0026160A /* Interactor */,
+				34EBC48923871FD70026160A /* Presenter */,
+				34EBC48823871FD20026160A /* Buılder */,
 				34EDE49D238715E900DA00E6 /* View */,
-				34EDE4972386F05A00DA00E6 /* WeatherDashboardController.swift */,
 			);
 			path = WeatherDashboard;
 			sourceTree = "<group>";
@@ -112,6 +161,7 @@
 		34EDE49D238715E900DA00E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				34EDE4972386F05A00DA00E6 /* WeatherDashboardController.swift */,
 				34EDE4982386F05A00DA00E6 /* WeatherDashboardController.xib */,
 			);
 			path = View;
@@ -235,8 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34EBC47B23871B230026160A /* WeatherDashboardProtocols.swift in Sources */,
 				34EDE4992386F05A00DA00E6 /* WeatherDashboardController.swift in Sources */,
+				34EBC48223871E9C0026160A /* WeatherDashboardPresenter.swift in Sources */,
+				34EBC48623871F420026160A /* WeatherDashboardRemoteDataManager.swift in Sources */,
 				34EDE4782386E4C600DA00E6 /* AppDelegate.swift in Sources */,
+				34EBC48423871EA40026160A /* WeatherDashboardRouter.swift in Sources */,
+				34EBC47E23871D720026160A /* WeatherDashboardBuilder.swift in Sources */,
+				34EBC48023871E880026160A /* WeatherDashboardInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
