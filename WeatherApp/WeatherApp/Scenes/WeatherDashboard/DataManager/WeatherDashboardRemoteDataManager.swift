@@ -12,7 +12,13 @@ final class WeatherDashboardRemoteDataManager: WeatherDashboardRemoteDataManager
 
     var remoteRequestHandler: WeatherDashboardRemoteDataManagerOutputProtocol?
     
-    func retrieveWaatherData() {
+    var networkProvider: Networkable?
+    
+    init(networkProvider: Networkable) {
+        self.networkProvider = networkProvider
+    }
+    
+    func retrieveWeatherData() {
         
     }
 }

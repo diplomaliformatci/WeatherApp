@@ -22,6 +22,10 @@ final class WeatherDashboardPresenter: WeatherDashboardPresenterProtocol {
     func dismissPage() {
         
     }
+    
+    func routeToSearch(delegate: DashboardDelegate) {
+        router?.navigate(to: .routeToDashboard(delegate: delegate))
+    }
 }
 
 

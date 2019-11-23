@@ -9,6 +9,10 @@
 import Foundation
 
 
+internal protocol DashboardDelegate: class {
+    func temp()
+}
+
 internal protocol WeatherDashboardViewProtocol: class {
     var presenter: WeatherDashboardPresenterProtocol? { get set }
     
@@ -25,6 +29,7 @@ internal protocol WeatherDashboardPresenterProtocol: class {
     
     // View -> Presenter
     func dismissPage()
+    func routeToSearch(delegate: DashboardDelegate)
 }
 
 internal protocol WeatherDashboardInteractorOutputProtocol: class {
@@ -42,7 +47,7 @@ internal protocol WeatherDashboardInteractorInputProtocol: class {
 internal protocol WeatherDashboardRemoteDataManagerInputProtocol: class {
     var remoteRequestHandler: WeatherDashboardRemoteDataManagerOutputProtocol? { get set }
     // DataManager -> Interactor
-    func retrieveWaatherData()
+    func retrieveWeatherData()
 }
 
 internal protocol WeatherDashboardRemoteDataManagerOutputProtocol: class {
@@ -53,6 +58,7 @@ internal protocol WeatherDashboardRemoteDataManagerOutputProtocol: class {
 
 internal enum WeatherDashboardRoute {
     case dismissPage
+    case routeToDashboard(delegate: DashboardDelegate)
 }
 
 internal protocol WeatherDashboardRouterProtocol: class {

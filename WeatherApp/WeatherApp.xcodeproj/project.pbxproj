@@ -3,10 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		348FBFC523885003007D1D52 /* CustomSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFC423885003007D1D52 /* CustomSearchBarView.swift */; };
+		348FBFC72388500F007D1D52 /* CustomSearchBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 348FBFC62388500F007D1D52 /* CustomSearchBarView.xib */; };
+		348FBFCA23886F10007D1D52 /* ExtUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFC923886F10007D1D52 /* ExtUITextField.swift */; };
+		348FBFCC23886F1B007D1D52 /* ExtUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFCB23886F1B007D1D52 /* ExtUIImage.swift */; };
+		348FBFD023886FEB007D1D52 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFCF23886FEB007D1D52 /* AssetManager.swift */; };
+		348FBFD3238883FC007D1D52 /* GoolgePlacesEndpointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFD2238883FC007D1D52 /* GoolgePlacesEndpointManager.swift */; };
+		348FBFD5238888DF007D1D52 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFD4238888DF007D1D52 /* NetworkManager.swift */; };
+		348FBFE6238891DD007D1D52 /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFE0238891DD007D1D52 /* Predictions.swift */; };
+		348FBFE823889260007D1D52 /* GPAutoCompleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFE723889260007D1D52 /* GPAutoCompleteResponse.swift */; };
+		348FBFF4238930FF007D1D52 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFF2238930FF007D1D52 /* SearchViewController.swift */; };
+		348FBFF5238930FF007D1D52 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 348FBFF3238930FF007D1D52 /* SearchViewController.xib */; };
+		348FBFF723893114007D1D52 /* SearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFF623893114007D1D52 /* SearchBuilder.swift */; };
+		348FBFF92389311D007D1D52 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFF82389311D007D1D52 /* SearchPresenter.swift */; };
+		348FBFFB23893127007D1D52 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFFA23893127007D1D52 /* SearchInteractor.swift */; };
+		348FBFFD2389313A007D1D52 /* SearchRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFFC2389313A007D1D52 /* SearchRemoteDataManager.swift */; };
+		348FBFFF238945BF007D1D52 /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FBFFE238945BF007D1D52 /* SearchProtocols.swift */; };
+		348FC0012389467F007D1D52 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FC0002389467F007D1D52 /* SearchRouter.swift */; };
+		348FC00723895C8D007D1D52 /* GeneralTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FC00623895C8D007D1D52 /* GeneralTableViewDataSource.swift */; };
+		348FC00B23895F11007D1D52 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FC00923895F11007D1D52 /* SearchResultTableViewCell.swift */; };
+		348FC00C23895F11007D1D52 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 348FC00A23895F11007D1D52 /* SearchResultTableViewCell.xib */; };
+		348FC00E23897005007D1D52 /* ExtUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FC00D23897005007D1D52 /* ExtUIColor.swift */; };
+		348FC010238972FF007D1D52 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FC00F238972FF007D1D52 /* Secret.swift */; };
 		34EBC47B23871B230026160A /* WeatherDashboardProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBC47A23871B230026160A /* WeatherDashboardProtocols.swift */; };
 		34EBC47E23871D720026160A /* WeatherDashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBC47D23871D720026160A /* WeatherDashboardBuilder.swift */; };
 		34EBC48023871E880026160A /* WeatherDashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBC47F23871E880026160A /* WeatherDashboardInteractor.swift */; };
@@ -35,6 +57,28 @@
 /* Begin PBXFileReference section */
 		1E0CBFC2511C3D83B997C504 /* Pods-WeatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAppTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		24F2DFE0524D53254D3413F0 /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		348FBFC423885003007D1D52 /* CustomSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBarView.swift; sourceTree = "<group>"; };
+		348FBFC62388500F007D1D52 /* CustomSearchBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSearchBarView.xib; sourceTree = "<group>"; };
+		348FBFC923886F10007D1D52 /* ExtUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUITextField.swift; sourceTree = "<group>"; };
+		348FBFCB23886F1B007D1D52 /* ExtUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIImage.swift; sourceTree = "<group>"; };
+		348FBFCF23886FEB007D1D52 /* AssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
+		348FBFD2238883FC007D1D52 /* GoolgePlacesEndpointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoolgePlacesEndpointManager.swift; sourceTree = "<group>"; };
+		348FBFD4238888DF007D1D52 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		348FBFE0238891DD007D1D52 /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
+		348FBFE723889260007D1D52 /* GPAutoCompleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAutoCompleteResponse.swift; sourceTree = "<group>"; };
+		348FBFF2238930FF007D1D52 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		348FBFF3238930FF007D1D52 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		348FBFF623893114007D1D52 /* SearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuilder.swift; sourceTree = "<group>"; };
+		348FBFF82389311D007D1D52 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		348FBFFA23893127007D1D52 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		348FBFFC2389313A007D1D52 /* SearchRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRemoteDataManager.swift; sourceTree = "<group>"; };
+		348FBFFE238945BF007D1D52 /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
+		348FC0002389467F007D1D52 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		348FC00623895C8D007D1D52 /* GeneralTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTableViewDataSource.swift; sourceTree = "<group>"; };
+		348FC00923895F11007D1D52 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		348FC00A23895F11007D1D52 /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
+		348FC00D23897005007D1D52 /* ExtUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIColor.swift; sourceTree = "<group>"; };
+		348FC00F238972FF007D1D52 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		34EBC47A23871B230026160A /* WeatherDashboardProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDashboardProtocols.swift; sourceTree = "<group>"; };
 		34EBC47D23871D720026160A /* WeatherDashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDashboardBuilder.swift; sourceTree = "<group>"; };
 		34EBC47F23871E880026160A /* WeatherDashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDashboardInteractor.swift; sourceTree = "<group>"; };
@@ -94,18 +138,175 @@
 				A74FBD49BADB24EBD6EF6B3E /* Pods-WeatherAppTests.debug.xcconfig */,
 				1E0CBFC2511C3D83B997C504 /* Pods-WeatherAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		34EBC48823871FD20026160A /* Buılder */ = {
+		348FBFC223884746007D1D52 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFD2238883FC007D1D52 /* GoolgePlacesEndpointManager.swift */,
+				348FBFD4238888DF007D1D52 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		348FBFC323884FD8007D1D52 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFCD23886F98007D1D52 /* SearchBar */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		348FBFC823886EEA007D1D52 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFC923886F10007D1D52 /* ExtUITextField.swift */,
+				348FBFCB23886F1B007D1D52 /* ExtUIImage.swift */,
+				348FC00D23897005007D1D52 /* ExtUIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		348FBFCD23886F98007D1D52 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFC423885003007D1D52 /* CustomSearchBarView.swift */,
+				348FBFC62388500F007D1D52 /* CustomSearchBarView.xib */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		348FBFCE23886FD9007D1D52 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		348FBFD1238871BF007D1D52 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				348FC00523895C47007D1D52 /* DataSource */,
+				348FBFCF23886FEB007D1D52 /* AssetManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		348FBFD62388919B007D1D52 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFD8238891A7007D1D52 /* Response */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		348FBFD8238891A7007D1D52 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFD9238891AC007D1D52 /* GooglePlacesResponse */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		348FBFD9238891AC007D1D52 /* GooglePlacesResponse */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFDA238891C2007D1D52 /* AutoCompleteResponse */,
+			);
+			path = GooglePlacesResponse;
+			sourceTree = "<group>";
+		};
+		348FBFDA238891C2007D1D52 /* AutoCompleteResponse */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFE0238891DD007D1D52 /* Predictions.swift */,
+				348FBFE723889260007D1D52 /* GPAutoCompleteResponse.swift */,
+			);
+			path = AutoCompleteResponse;
+			sourceTree = "<group>";
+		};
+		348FBFEC23893070007D1D52 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFF1238930A9007D1D52 /* View */,
+				348FBFF0238930A3007D1D52 /* Builder */,
+				348FBFEF2389309E007D1D52 /* Presenter */,
+				348FBFEE2389309A007D1D52 /* Interactor */,
+				348FBFED23893094007D1D52 /* DataManager */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		348FBFED23893094007D1D52 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFFC2389313A007D1D52 /* SearchRemoteDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		348FBFEE2389309A007D1D52 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFFA23893127007D1D52 /* SearchInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		348FBFEF2389309E007D1D52 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFF82389311D007D1D52 /* SearchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		348FBFF0238930A3007D1D52 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				348FBFF623893114007D1D52 /* SearchBuilder.swift */,
+				348FBFFE238945BF007D1D52 /* SearchProtocols.swift */,
+				348FC0002389467F007D1D52 /* SearchRouter.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		348FBFF1238930A9007D1D52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				348FC00823895EF1007D1D52 /* Cells */,
+				348FBFF2238930FF007D1D52 /* SearchViewController.swift */,
+				348FBFF3238930FF007D1D52 /* SearchViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		348FC00523895C47007D1D52 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				348FC00623895C8D007D1D52 /* GeneralTableViewDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		348FC00823895EF1007D1D52 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				348FC00923895F11007D1D52 /* SearchResultTableViewCell.swift */,
+				348FC00A23895F11007D1D52 /* SearchResultTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		34EBC48823871FD20026160A /* Buıider */ = {
 			isa = PBXGroup;
 			children = (
 				34EBC48323871EA40026160A /* WeatherDashboardRouter.swift */,
 				34EBC47A23871B230026160A /* WeatherDashboardProtocols.swift */,
 				34EBC47D23871D720026160A /* WeatherDashboardBuilder.swift */,
 			);
-			path = "Buılder";
+			path = "Buıider";
 			sourceTree = "<group>";
 		};
 		34EBC48923871FD70026160A /* Presenter */ = {
@@ -155,9 +356,16 @@
 		34EDE4762386E4C600DA00E6 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				348FBFD62388919B007D1D52 /* Models */,
+				348FBFD1238871BF007D1D52 /* Utils */,
+				348FBFCE23886FD9007D1D52 /* Singletons */,
+				348FBFC823886EEA007D1D52 /* Extension */,
+				348FBFC323884FD8007D1D52 /* CustomViews */,
+				348FBFC223884746007D1D52 /* Network */,
 				34EDE49F2387165700DA00E6 /* Application */,
 				34EDE49E2387161F00DA00E6 /* Resources */,
 				34EDE49B238715C900DA00E6 /* Scenes */,
+				348FC00F238972FF007D1D52 /* Secret.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -174,6 +382,7 @@
 		34EDE49B238715C900DA00E6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				348FBFEC23893070007D1D52 /* Search */,
 				34EDE49C238715D300DA00E6 /* WeatherDashboard */,
 			);
 			path = Scenes;
@@ -185,7 +394,7 @@
 				34EBC48B23871FE80026160A /* DataManager */,
 				34EBC48A23871FDC0026160A /* Interactor */,
 				34EBC48923871FD70026160A /* Presenter */,
-				34EBC48823871FD20026160A /* Buılder */,
+				34EBC48823871FD20026160A /* Buıider */,
 				34EDE49D238715E900DA00E6 /* View */,
 			);
 			path = WeatherDashboard;
@@ -302,7 +511,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				348FBFC72388500F007D1D52 /* CustomSearchBarView.xib in Resources */,
+				348FC00C23895F11007D1D52 /* SearchResultTableViewCell.xib in Resources */,
 				34EDE49A2386F05A00DA00E6 /* WeatherDashboardController.xib in Resources */,
+				348FBFF5238930FF007D1D52 /* SearchViewController.xib in Resources */,
 				34EDE47F2386E4C700DA00E6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,13 +597,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				348FBFE6238891DD007D1D52 /* Predictions.swift in Sources */,
 				34EBC47B23871B230026160A /* WeatherDashboardProtocols.swift in Sources */,
 				34EDE4992386F05A00DA00E6 /* WeatherDashboardController.swift in Sources */,
+				348FC00E23897005007D1D52 /* ExtUIColor.swift in Sources */,
+				348FBFFF238945BF007D1D52 /* SearchProtocols.swift in Sources */,
+				348FBFF4238930FF007D1D52 /* SearchViewController.swift in Sources */,
 				34EBC48223871E9C0026160A /* WeatherDashboardPresenter.swift in Sources */,
+				348FC00B23895F11007D1D52 /* SearchResultTableViewCell.swift in Sources */,
+				348FC00723895C8D007D1D52 /* GeneralTableViewDataSource.swift in Sources */,
+				348FBFFD2389313A007D1D52 /* SearchRemoteDataManager.swift in Sources */,
+				348FBFF92389311D007D1D52 /* SearchPresenter.swift in Sources */,
+				348FBFCA23886F10007D1D52 /* ExtUITextField.swift in Sources */,
+				348FBFD023886FEB007D1D52 /* AssetManager.swift in Sources */,
+				348FBFE823889260007D1D52 /* GPAutoCompleteResponse.swift in Sources */,
 				34EBC48623871F420026160A /* WeatherDashboardRemoteDataManager.swift in Sources */,
 				34EDE4782386E4C600DA00E6 /* AppDelegate.swift in Sources */,
+				348FC0012389467F007D1D52 /* SearchRouter.swift in Sources */,
+				348FBFC523885003007D1D52 /* CustomSearchBarView.swift in Sources */,
+				348FBFF723893114007D1D52 /* SearchBuilder.swift in Sources */,
 				34EBC48423871EA40026160A /* WeatherDashboardRouter.swift in Sources */,
+				348FBFFB23893127007D1D52 /* SearchInteractor.swift in Sources */,
+				348FBFCC23886F1B007D1D52 /* ExtUIImage.swift in Sources */,
+				348FBFD5238888DF007D1D52 /* NetworkManager.swift in Sources */,
 				34EBC47E23871D720026160A /* WeatherDashboardBuilder.swift in Sources */,
+				348FBFD3238883FC007D1D52 /* GoolgePlacesEndpointManager.swift in Sources */,
+				348FC010238972FF007D1D52 /* Secret.swift in Sources */,
 				34EBC48023871E880026160A /* WeatherDashboardInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

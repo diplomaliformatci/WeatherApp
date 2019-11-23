@@ -7,13 +7,17 @@
 //
 
 import UIKit
-
+import Moya
 fileprivate struct FileConstants {
     static let NibName = "WeatherDashboardController"
 }
 
 class WeatherDashboardController: UIViewController {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var searchBar: CustomSearchBarView!
+    
+    // MARK: - Delegates
     var presenter: WeatherDashboardPresenterProtocol?
     
     init() {
@@ -29,23 +33,34 @@ class WeatherDashboardController: UIViewController {
 extension WeatherDashboardController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        routeToSearch()
+    }
+}
+
+extension WeatherDashboardController: DashboardDelegate {
+    func temp() {
+        print("delegate send")
     }
 }
 
 // MARK: - View Protocol
 extension WeatherDashboardController: WeatherDashboardViewProtocol {
     
-    func showError(_ error: String) {
-        
-    }
+    func showError(_ error: String) { }
     
-    func showLoading() {
-        
-    }
+    func showLoading() { }
     
-    func hideLoading() {
-        
-    }
+    func hideLoading() { }
     
+}
+
+
+extension WeatherDashboardController {
+    func routeToSearch() {
+        presenter?.routeToSearch(delegate: self)
+    }
 }

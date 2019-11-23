@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = WeatherDashboardBuilder.build()
+        window?.rootViewController = UINavigationController(rootViewController: WeatherDashboardBuilder.build())
 //        window?.rootViewController = UIViewController(nibName: "WeatherDashboardController", bundle: Bundle(for: type(of: self)))
 //        window?.rootViewController = UINavigationController(rootViewController: WeatherDashboardController())
         

@@ -10,9 +10,9 @@ import UIKit
 
 internal final class WeatherDashboardRouter: WeatherDashboardRouterProtocol {
     
-    unowned let view: UIViewController
+    unowned let view: WeatherDashboardController
     
-    init(view: UIViewController) {
+    init(view: WeatherDashboardController) {
         self.view = view
     }
     
@@ -20,6 +20,8 @@ internal final class WeatherDashboardRouter: WeatherDashboardRouterProtocol {
         switch route {
         case .dismissPage:
             break
+        case .routeToDashboard(let delegate):
+            view.navigationController?.pushViewController(SearchBuilder.build(delegate: delegate), animated: true)
         }
     }
     
