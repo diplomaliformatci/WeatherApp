@@ -13,7 +13,8 @@ protocol CustomViewInitializeProtocol {
 }
 
 protocol SearchBarDelegate: class {
-    func searchBar(_ textField: UITextField, text didChange: String)
+    func searchBar(_ searchBar: CustomSearchBarView, didChange text: String)
+    func searchBar(_ serchBar: CustomSearchBarView, didClear text: Bool)
 }
 
 extension CustomViewInitializeProtocol where Self: UIView  {
@@ -27,8 +28,8 @@ extension CustomViewInitializeProtocol where Self: UIView  {
 
 class CustomSearchBarView: UIView {
     
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet var contentView: UIView!
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private var contentView: UIView!
     
     weak var delegate: SearchBarDelegate?
     
@@ -42,6 +43,8 @@ class CustomSearchBarView: UIView {
         super.init(coder: aDecoder)
         commonInit()
         setLayoutProperties()
+        setDelegates()
+        setObservers()
     }
     
     private func commonInit() {
@@ -59,10 +62,28 @@ extension CustomSearchBarView {
     private func setLayoutProperties() {
         textField.addLeftView(width: 24, horizontalPadding: 24, iconImage: UIImage(named: AssetManager.searchIcon))
     }
+    
+    private func setDelegates() {
+        textField.delegate = self
+    }
+    
+    private func setObservers() {
+        textField.addTarget(self, action: #selector(textFieldValueChanged), for: UIControl.Event.editingChanged)
+    }
+    
 }
 
 // MARK: - TextField
 extension CustomSearchBarView: UITextFieldDelegate {
+    
+    @IBAction func textFieldValueChanged() {
+        guard let text = textField.text else {
+            return
+        }
+        
+        text.isEmpty ? delegate?.searchBar(self, didClear: true) : delegate?.searchBar(self, didChange: text)
+    }
+    
 }
 
 

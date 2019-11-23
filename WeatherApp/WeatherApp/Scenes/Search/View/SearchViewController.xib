@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="WeatherApp" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="VBL-yH-Trj" id="YuU-jp-ZtL"/>
                 <outlet property="searchResultsTableView" destination="gkF-yJ-A8C" id="WGQ-ub-XHM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

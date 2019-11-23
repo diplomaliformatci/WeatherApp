@@ -10,7 +10,7 @@ import Foundation
 
 
 internal protocol DashboardDelegate: class {
-    func temp()
+    func userDidChooseLocation(lat: Double?, long: Double?)
 }
 
 internal protocol WeatherDashboardViewProtocol: class {

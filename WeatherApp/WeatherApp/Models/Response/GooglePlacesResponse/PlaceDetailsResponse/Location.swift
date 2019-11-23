@@ -12,8 +12,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Predictions: Codable {
-	let description: String?
-	let place_id: String?
-
+struct Location : Codable {
+	let lat : Double?
+	let lng : Double?
 }

@@ -22,6 +22,7 @@ class SearchResultTableViewCell: UITableViewCell {
     
     private func setLayoutProperties() {
         backgroundColor = .extraLightGray
+        self.selectionStyle = .none
     }
     
     

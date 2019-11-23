@@ -8,6 +8,7 @@
 
 import UIKit
 import Moya
+
 fileprivate struct FileConstants {
     static let NibName = "WeatherDashboardController"
 }
@@ -42,8 +43,9 @@ extension WeatherDashboardController {
 }
 
 extension WeatherDashboardController: DashboardDelegate {
-    func temp() {
-        print("delegate send")
+    func userDidChooseLocation(lat: Double?, long: Double?) {
+        print("LATITDE: ",lat)
+        print("LONGITUDE: ",long)
     }
 }
 

@@ -29,5 +29,16 @@ final class SearchRemoteDataManager: SearchRemoteDataManagerInputProtocol {
             }
         }
     }
+    
+    func retrieveSelectedPlaceDetails(with id: String) {
+        networkProvider.placeDetails(placeId: id) { (response) in
+            switch response?.status {
+            case "OK":
+                self.remoteRequestHandler?.didRetrieveSelectedPlaceDetails(response: response)
+            default:
+                break
+            }
+        }
+    }
 }
 

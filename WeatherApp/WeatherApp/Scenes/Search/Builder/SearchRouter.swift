@@ -19,7 +19,7 @@ internal final class SearchRouter: SearchRouterProtocol {
     func navigate(to route: SearchRoute) {
         switch route {
         case .dismissPage:
-            break
+            view.navigationController?.popViewController(animated: true)
         }
     }
     

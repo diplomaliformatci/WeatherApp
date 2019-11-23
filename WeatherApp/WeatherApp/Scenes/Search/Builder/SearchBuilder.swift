@@ -17,7 +17,7 @@ final class SearchBuilder {
         let router: SearchRouterProtocol = SearchRouter(view: controller)
         let interactor: SearchInteractorInputProtocol & SearchRemoteDataManagerOutputProtocol = SearchInteractor()
         let presenter: SearchPresenterProtocol & SearchInteractorOutputProtocol = SearchPresenter(view: controller, interactor: interactor, router: router)
-        let remoteDataManager: SearchRemoteDataManagerInputProtocol = SearchRemoteDataManager(networkProvider: NetworkManager(provider: MoyaProvider<GooglePlacesAPI>()))
+        let remoteDataManager: SearchRemoteDataManagerInputProtocol = SearchRemoteDataManager(networkProvider: NetworkManager(provider: NetworkManager().provider))
         
         
         controller.presenter = presenter

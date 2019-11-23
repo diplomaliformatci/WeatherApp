@@ -20,6 +20,10 @@ extension SearchInteractor:  SearchInteractorInputProtocol {
         remoteDataManager?.retrievePlaces(by: text)
     }
     
+    func retrieveSelectedPlaceDetails(with id: String) {
+        remoteDataManager?.retrieveSelectedPlaceDetails(with: id)
+    }
+    
     func onError(_ error: String) {
         
     }
@@ -27,6 +31,14 @@ extension SearchInteractor:  SearchInteractorInputProtocol {
 }
 
 extension SearchInteractor: SearchRemoteDataManagerOutputProtocol {
+    func didRetrieveSelectedPlaceDetails(response: GPPlaceDetailsResponse?) {
+        guard let result = response?.result else {
+            presenter?.onError("No data Found")
+            return
+        }
+        presenter?.didRetrieveSelectedPlaceDetails(placeDetailsResult: result.geometry)
+    }
+    
     func didRetrievePlaces(placesResult: GPAutoCompleteResponse?) {
         guard let predictions = placesResult?.predictions else {
             presenter?.onError("No Data Found")

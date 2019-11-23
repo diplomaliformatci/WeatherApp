@@ -13,6 +13,7 @@ internal protocol SearchViewProtocol: class {
     
     // Presenter -> View
     func showPlaces(places: [Predictions])
+    func showPlaceDetails(details: GPGeometry)
     func showError(_ error: String)
     func showLoading()
     func hideLoading()
@@ -26,13 +27,18 @@ internal protocol SearchPresenterProtocol: class {
     // View -> Presenter
     func dismissPage()
     
+    func clearTableView()
+    
+    func retrieveSelectedPlaceDetails(with indexPath: IndexPath)
     func retrievePlaces(by text: String)
+    
 }
 
 internal protocol SearchInteractorOutputProtocol: class {
     // DataManager -> Interactor
     func onError(_ error: String)
     func didRetrievePlaces(placesResult: [Predictions])
+    func didRetrieveSelectedPlaceDetails(placeDetailsResult: GPGeometry?)
 }
 
 internal protocol SearchInteractorInputProtocol: class {
@@ -40,12 +46,14 @@ internal protocol SearchInteractorInputProtocol: class {
     var remoteDataManager: SearchRemoteDataManagerInputProtocol? { get set }
     // Interactor -> DataManager
     func retrievePlaces(by text: String)
+    func retrieveSelectedPlaceDetails(with id: String)
 }
 
 internal protocol SearchRemoteDataManagerInputProtocol: class {
     var remoteRequestHandler: SearchRemoteDataManagerOutputProtocol? { get set }
     // DataManager -> Interactor
     func retrievePlaces(by text: String)
+    func retrieveSelectedPlaceDetails(with id: String)
     
 }
 
@@ -53,6 +61,7 @@ internal protocol SearchRemoteDataManagerOutputProtocol: class {
     // DataManager -> API Call
     func onError(_ error: String)
     func didRetrievePlaces(placesResult: GPAutoCompleteResponse?)
+    func didRetrieveSelectedPlaceDetails(response: GPPlaceDetailsResponse?)
 }
 
 internal enum SearchRoute {
