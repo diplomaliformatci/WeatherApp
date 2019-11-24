@@ -10,7 +10,7 @@ import Foundation
 import Moya
 final class SearchBuilder {
     
-    class func build(delegate: DashboardDelegate) -> SearchViewController {
+    class func make(delegate: DashboardDelegate) -> SearchViewController {
         
         let controller = SearchViewController(delegate: delegate)
         

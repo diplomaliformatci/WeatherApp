@@ -8,9 +8,6 @@
 
 import Foundation
 import Moya
-//http://api.openweathermap.org/data/2.5/forecast/daily?lat=35&lon=139&cnt=10&appid=14588a978135a26e0cb964d1f40444bd
-
-
 
 enum OpenWeatherAPI {
     case weatherInformation(lat: Double, long: Double)

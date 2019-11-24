@@ -21,7 +21,7 @@ internal final class WeatherDashboardRouter: WeatherDashboardRouterProtocol {
         case .dismissPage:
             break
         case .routeToDashboard(let delegate):
-            view.navigationController?.pushViewController(SearchBuilder.build(delegate: delegate), animated: true)
+            view.navigationController?.pushViewController(SearchBuilder.make(delegate: delegate), animated: true)
         }
     }
     
