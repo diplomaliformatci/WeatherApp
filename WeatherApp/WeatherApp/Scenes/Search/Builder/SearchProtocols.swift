@@ -14,9 +14,9 @@ internal protocol SearchViewProtocol: class {
     // Presenter -> View
     func showPlaces(places: [Predictions])
     func showPlaceDetails(details: GPGeometry)
-    func showError(_ error: String)
-    func showLoading()
-    func hideLoading()
+    func showError(_ error: String) // No use on this project
+    func showLoading() // No use on this project
+    func hideLoading() // No use on this project
 }
 
 internal protocol SearchPresenterProtocol: class {
@@ -36,7 +36,7 @@ internal protocol SearchPresenterProtocol: class {
 
 internal protocol SearchInteractorOutputProtocol: class {
     // DataManager -> Interactor
-    func onError(_ error: String)
+    func onError(_ error: String) // No use on this project
     func didRetrievePlaces(placesResult: [Predictions])
     func didRetrieveSelectedPlaceDetails(placeDetailsResult: GPGeometry?)
 }
@@ -59,7 +59,7 @@ internal protocol SearchRemoteDataManagerInputProtocol: class {
 
 internal protocol SearchRemoteDataManagerOutputProtocol: class {
     // DataManager -> API Call
-    func onError(_ error: String)
+    func onError(_ error: String) // No use on this project
     func didRetrievePlaces(placesResult: GPAutoCompleteResponse?)
     func didRetrieveSelectedPlaceDetails(response: GPPlaceDetailsResponse?)
 }

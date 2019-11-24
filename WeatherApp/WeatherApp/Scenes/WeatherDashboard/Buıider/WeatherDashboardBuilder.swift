@@ -11,14 +11,15 @@ import Moya
 
 final class WeatherDashboardBuilder {
     
-    class func build() -> WeatherDashboardController {
+    class func make() -> WeatherDashboardController {
     
         let controller = WeatherDashboardController()
         
         let router: WeatherDashboardRouterProtocol = WeatherDashboardRouter(view: controller)
         let interactor: WeatherDashboardInteractorInputProtocol & WeatherDashboardRemoteDataManagerOutputProtocol = WeatherDashboardInteractor()
         let presenter: WeatherDashboardPresenterProtocol & WeatherDashboardInteractorOutputProtocol = WeatherDashboardPresenter(view: controller, interactor: interactor, router: router)
-        let remoteDataManager: WeatherDashboardRemoteDataManagerInputProtocol = WeatherDashboardRemoteDataManager(networkProvider: NetworkManager(provider: MoyaProvider<GooglePlacesAPI>()))
+        let remoteDataManager: WeatherDashboardRemoteDataManagerInputProtocol = WeatherDashboardRemoteDataManager(networkProvider: NetworkManager(provider: NetworkManager().provider))
+        
         
         
         controller.presenter = presenter

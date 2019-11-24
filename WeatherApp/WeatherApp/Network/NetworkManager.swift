@@ -11,28 +11,38 @@ import Moya
 
 struct NetworkManager: Networkable {
     
-    var provider = MoyaProvider<GooglePlacesAPI>(plugins: [NetworkLoggerPlugin(verbose: false, cURL: false)])
-
-    func autoComplete<T: Codable>(input: String, completion: @escaping (T?) -> ()) {
-        provider.request(.autoComplete(input: input)) { result in
+    var provider = MoyaProvider<MultiTarget>(plugins: [NetworkLoggerPlugin(verbose: true, cURL: false)])
+    
+    func autoComplete(input: String, completion: @escaping (GPAutoCompleteResponse?) -> ()) {
+        provider.request(MultiTarget(GooglePlacesAPI.autoComplete(input: input))) { result in
             switch result {
             case let .success(response):
-                completion(try? JSONDecoder().decode(T.self, from: response.data))
+                completion(try? JSONDecoder().decode(GPAutoCompleteResponse.self, from: response.data))
             case .failure(_):
-                fatalError("Network failure")
+                fatalError("Network Error")
             }
         }
     }
     
-    func placeDetails<T: Codable>(placeId: String, completion: @escaping (T?) -> ()) {
-        provider.request(.placeDetails(placeId: placeId)) { result in
+    func placeDetails(placeId: String, completion: @escaping (GPPlaceDetailsResponse?) -> ()) {
+        provider.request(MultiTarget(GooglePlacesAPI.placeDetails(placeId: placeId))) { result in
             switch result {
             case let .success(response):
-                completion(try? JSONDecoder().decode(T.self, from: response.data))
+                completion(try? JSONDecoder().decode(GPPlaceDetailsResponse.self, from: response.data))
             case .failure(_):
-                fatalError("Network Failiure")
+                fatalError("Network Error")
             }
         }
     }
     
+    func openWeatherByGeoLocation(lat: Double, long: Double, completion: @escaping (OpenWeatherResponse?) -> ()) {
+        provider.request(MultiTarget(OpenWeatherAPI.weatherInformation(lat: lat, long: long))) { result in
+            switch result {
+            case let .success(response):
+                completion(try? JSONDecoder().decode(OpenWeatherResponse.self, from: response.data))
+            case .failure(_):
+                fatalError("Network Error")
+            }
+        }
+    }
 }

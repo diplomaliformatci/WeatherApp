@@ -17,9 +17,11 @@ internal protocol WeatherDashboardViewProtocol: class {
     var presenter: WeatherDashboardPresenterProtocol? { get set }
     
     // Presenter -> View
-    func showError(_ error: String)
-    func showLoading()
-    func hideLoading()
+    func showWeatherData(weatherData: [WeatherDataModel])
+    func showMainWeather(weather: WeatherDataModel, cityName: String?)
+    func showError(_ error: String) // No use on this project
+    func showLoading() // No use on this project
+    func hideLoading() // No use on this project
 }
 
 internal protocol WeatherDashboardPresenterProtocol: class {
@@ -28,32 +30,37 @@ internal protocol WeatherDashboardPresenterProtocol: class {
     var router: WeatherDashboardRouterProtocol? { get set }
     
     // View -> Presenter
-    func dismissPage()
     func routeToSearch(delegate: DashboardDelegate)
+    
+    func convertTempature(to type: TempatureType)
+    
+    func retrieveWeatherData(lat: Double, long: Double)
+    
 }
 
 internal protocol WeatherDashboardInteractorOutputProtocol: class {
     // DataManager -> Interactor
-    func onError(_ error: String)
+    func onError(_ error: String) // No use on this project
+    func didRetrieveWeatherData(result: OpenWeatherResponse)
 }
 
 internal protocol WeatherDashboardInteractorInputProtocol: class {
     var presenter: WeatherDashboardInteractorOutputProtocol? { get set }
     var remoteDataManager: WeatherDashboardRemoteDataManagerInputProtocol? { get set }
     // Interactor -> DataManager
-    func retrieveWeatherData()
+    func retrieveWeatherData(lat: Double, long: Double)
 }
 
 internal protocol WeatherDashboardRemoteDataManagerInputProtocol: class {
     var remoteRequestHandler: WeatherDashboardRemoteDataManagerOutputProtocol? { get set }
     // DataManager -> Interactor
-    func retrieveWeatherData()
+    func retrieveWeatherData(lat: Double, long: Double)
 }
 
 internal protocol WeatherDashboardRemoteDataManagerOutputProtocol: class {
     // DataManager -> API Call
-//    func onWeatherDataRetrieved(_ data: WarehouseResponse?)
-    func onError(_ error: String)
+    func didRetrieveWeatherData(_ data: OpenWeatherResponse?)
+    func onError(_ error: String) // No use on this project
 }
 
 internal enum WeatherDashboardRoute {

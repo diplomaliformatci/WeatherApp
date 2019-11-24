@@ -12,13 +12,20 @@ final class WeatherDashboardRemoteDataManager: WeatherDashboardRemoteDataManager
 
     var remoteRequestHandler: WeatherDashboardRemoteDataManagerOutputProtocol?
     
-    var networkProvider: Networkable?
+    var networkProvider: Networkable
     
     init(networkProvider: Networkable) {
         self.networkProvider = networkProvider
     }
     
-    func retrieveWeatherData() {
-        
+    func retrieveWeatherData(lat: Double, long: Double) {
+        networkProvider.openWeatherByGeoLocation(lat: lat, long: long, completion: { result in
+            switch result {
+            case .none:
+                self.remoteRequestHandler?.onError("")
+            case .some(_):
+                self.remoteRequestHandler?.didRetrieveWeatherData(result)
+            }
+        })
     }
 }

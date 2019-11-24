@@ -31,7 +31,7 @@ final class SearchPresenter: SearchPresenterProtocol {
 
 extension SearchPresenter: SearchInteractorOutputProtocol {
     
-    func onError(_ error: String) { }
+    func onError(_ error: String) { } // No use on this project
     
     func didRetrievePlaces(placesResult: [Predictions]) {
         view?.hideLoading()

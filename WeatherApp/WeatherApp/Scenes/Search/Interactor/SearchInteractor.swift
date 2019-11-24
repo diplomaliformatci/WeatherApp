@@ -24,9 +24,7 @@ extension SearchInteractor:  SearchInteractorInputProtocol {
         remoteDataManager?.retrieveSelectedPlaceDetails(with: id)
     }
     
-    func onError(_ error: String) {
-        
-    }
+    func onError(_ error: String) { } // No use on this project
     
 }
 

@@ -26,7 +26,7 @@ extension CustomViewInitializeProtocol where Self: UIView  {
     
 }
 
-class CustomSearchBarView: UIView {
+class CustomSearchBarView: UIView, CustomViewInitializeProtocol {
     
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private var contentView: UIView!
@@ -55,7 +55,6 @@ class CustomSearchBarView: UIView {
     }
 }
 
-extension CustomSearchBarView: CustomViewInitializeProtocol {  }
 
 // MARK: - Layout
 extension CustomSearchBarView {

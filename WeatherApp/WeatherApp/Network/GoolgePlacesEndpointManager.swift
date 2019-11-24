@@ -9,15 +9,11 @@
 import Foundation
 import Moya
 
-//https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJN1t_tDeuEmsRUsoyG83frY4&fields=name,geometry&key=AIzaSyC-a8Qohw3xNHlsH9s_4mY1a5w3w40D_QE
-
-//https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJN1t_tDeuEmsRUsoyG83frY4&fields=geometry&key=AIzaSyC-a8Qohw3xNHlsH9s_4mY1a5w3w40D_QE
-
-
 protocol Networkable {
-    var provider: MoyaProvider<GooglePlacesAPI> { get }
+    var provider: MoyaProvider<MultiTarget> { get }
     func autoComplete(input: String, completion: @escaping (GPAutoCompleteResponse?) -> ())
     func placeDetails(placeId: String, completion: @escaping (GPPlaceDetailsResponse?) -> ())
+    func openWeatherByGeoLocation(lat: Double, long: Double, completion: @escaping (OpenWeatherResponse?) -> () )
 }
 
 enum GooglePlacesAPI {

@@ -15,8 +15,8 @@ fileprivate struct FileConstants {
 class SearchViewController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet weak var searchResultsTableView: UITableView!
-    @IBOutlet weak var searchBar: CustomSearchBarView!
+    @IBOutlet private weak var searchResultsTableView: UITableView!
+    @IBOutlet private weak var searchBar: CustomSearchBarView!
 
     // MARK: - Properties
     var dataSource: UITableViewDataSource? {
@@ -116,6 +116,7 @@ extension SearchViewController: SearchViewProtocol {
     
     func showPlaceDetails(details: GPGeometry) {
         dashboardDelegate?.userDidChooseLocation(lat: details.location?.lat, long: details.location?.lng)
+        UserDefaultsManager.shared.setLastChoosedLocation((lat: details.location?.lat, lon: details.location?.lng))
         presenter?.dismissPage()
     }
     
