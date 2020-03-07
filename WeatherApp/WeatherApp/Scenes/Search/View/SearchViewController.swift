@@ -25,7 +25,7 @@ class SearchViewController: UIViewController {
         }
     }
     
-    // MARK: - Delegates   
+    // MARK: - Delegate METHODS
     weak var dashboardDelegate: DashboardDelegate?
     var presenter: SearchPresenterProtocol?
     
